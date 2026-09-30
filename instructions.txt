@@ -1,0 +1,3 @@
+javac {{file.java}} //to compile java files
+java {{java binary}} //to execute
+jflex -d {{directory}} {{file.flex}} //to create parser
