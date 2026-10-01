@@ -3,12 +3,19 @@
 
 (hello-world)
 
+(setq val1 300)
+(setq val2 600)
 
-? (forall '(2 4 6 12) #'even) ; Is every element a number?
-T
-? (forall '(1 2 (3) 4) #even)
-NIL
-? (forall '(nil nil nil nil) #'null) ; Is every element null?
-T
-? (forall '(nil definitely-not nil) #'null)
-NIL
+(print (+ val1 val2))
+
+(print (- val1 val2))
+
+(print (* val1 val2))
+
+(print (/ val1 val2))
+
+(print (MOD val1 val2))
+
+(print (incf val1 val2))
+
+(print (decf val1 val2))
