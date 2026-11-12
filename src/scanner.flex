@@ -14,16 +14,15 @@ Symbol_Chars = {Symbol_Char}*
 Symbol = {Initial_Char}{Symbol_Chars}
 
 String = \"{Character}*\"
-Boolean = T|NIL|#t|#f
+Boolean = T|NIL|#t|#f|nil|t|f
 
-Operator = \( | \)
+Open_Parantheses = \(
+Close_Parantheses = \)
 Atom = {Number} | {Symbol} | {String} | {Boolean}
 %%
 
 {Whitespace} {}
 
-{Number} {System.out.print("NUMBER: " + yytext() + "\n");}
-{Symbol} {System.out.print("SYMBOL: " + yytext() + "\n");}
-{String} {System.out.print("STRING: " + yytext() + "\n");}
-{Boolean} {System.out.print("BOOLEAN: " + yytext() + "\n");}
-{Operator} {System.out.print("OPERATOR: " + yytext() + "\n");}
+{Atom} {System.out.print("ATOM" + "\n");}
+{Open_Parantheses} {System.out.print("OPEN_PARENTHESES" + "\n");}
+{Close_Parantheses} {System.out.print("CLOSE_PARENTHESES" + "\n");}
